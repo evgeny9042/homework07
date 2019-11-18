@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include <string>
 #include <fstream>
@@ -6,7 +6,7 @@
 
 struct MyCout
 {
-  /// Вывести данные
+  /// Р’С‹РІРµСЃС‚Рё РґР°РЅРЅС‹Рµ
   MyCout& operator << (const std::string &cmd)
   {
     std::cout << cmd;
@@ -17,19 +17,19 @@ struct MyCout
 
 struct MyFile
 {      
-  /// Конструктор
-  /// @param time_str время в виде строки
+  /// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+  /// @param time_str РІСЂРµРјСЏ РІ РІРёРґРµ СЃС‚СЂРѕРєРё
   explicit MyFile(std::string time_str)
   {
     std::string name = std::string("bulk") + time_str + std::string(".log");
     file.open(name);
   }
-  /// Деструктор
+  /// Р”РµСЃС‚СЂСѓРєС‚РѕСЂ
   ~MyFile()
   {
     file.close();
   }
-  /// Вывести данные
+  /// Р’С‹РІРµСЃС‚Рё РґР°РЅРЅС‹Рµ
   MyFile& operator << (const std::string &cmd)
   {
     file << cmd;
